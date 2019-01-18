@@ -3,11 +3,11 @@
 
 ## Getting started
 
-`$ npm install react-native-screen-control --save`
+`$ npm install @textile/react-native-screen-control --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-screen-control`
+`$ react-native link @textile/react-native-screen-control`
 
 ### Manual installation
 
@@ -15,7 +15,7 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-screen-control` and add `RNScreenControl.xcodeproj`
+2. Go to `node_modules` ➜ `@textile/react-native-screen-control` and add `RNScreenControl.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNScreenControl.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
