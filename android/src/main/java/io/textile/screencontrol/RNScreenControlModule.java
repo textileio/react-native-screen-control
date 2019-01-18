@@ -1,3 +1,5 @@
+package io.textile.screencontrol;
+
 import android.app.Activity;
 import android.view.WindowManager;
 
@@ -10,9 +12,9 @@ public class RNScreenControlModule extends ReactContextBaseJavaModule {
     public static final String REACT_CLASS = "RNScreenControl";
     private static ReactApplicationContext reactContext = null;
 
-    public RNScreenControlModule(ReactApplicationContext reactContext) {
-        super(reactContext);
-        this.reactContext = reactContext;
+    public RNScreenControlModule(ReactApplicationContext context) {
+        super(context);
+        this.reactContext = context;
     }
 
     @Override
