@@ -37,6 +37,6 @@
 
 ## Usage
 ```javascript
-import { keepScreenOn, letScreenSleep } from 'react-native-screen-control'
+import { keepScreenOn, letScreenSleep } from '@textile/react-native-screen-control'
 ```
   
