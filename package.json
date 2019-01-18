@@ -1,10 +1,9 @@
-
 {
   "name": "@textile/react-native-screen-control",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "## Getting started",
   "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/index.js",
     "dist/index.js.map",
@@ -28,5 +27,17 @@
     "@types/react-native": "^0.57.2",
     "react-native": "^0.41.2",
     "typescript": "^3.2.2"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/textileio/react-native-screen-control.git"
+  },
+  "bugs": {
+    "url": "https://github.com/textileio/react-native-screen-control/issues"
+  },
+  "homepage": "https://github.com/textileio/react-native-screen-control#readme"
 }
