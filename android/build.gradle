@@ -1,3 +1,11 @@
+import groovy.json.JsonSlurper
+
+def computeVersionName() {
+    // dynamically retrieve version from package.json
+    def slurper = new JsonSlurper()
+    def json = slurper.parse(file('../package.json'), "utf-8")
+    return json.version
+}
 
 buildscript {
     repositories {
@@ -6,21 +14,25 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
 apply plugin: 'com.android.library'
 
+def DEFAULT_COMPILE_SDK_VERSION = 27
+def DEFAULT_BUILD_TOOLS_VERSION = "27.0.3"
+def DEFAULT_TARGET_SDK_VERSION = 26
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion "28.0.3"
+    compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.hasProperty('buildToolsVersion') ? rootProject.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
+        targetSdkVersion rootProject.hasProperty('targetSdkVersion') ? rootProject.targetSdkVersion : DEFAULT_TARGET_SDK_VERSION
         versionCode 1
-        versionName "1.0"
+        versionName computeVersionName()
     }
     lintOptions {
         abortOnError false
@@ -29,9 +41,12 @@ android {
 
 repositories {
     mavenCentral()
+    google()
+    maven {
+        url "$projectDir/../../react-native/android"
+    }
 }
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
 }
-  
