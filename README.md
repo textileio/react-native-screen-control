@@ -40,3 +40,11 @@
 import { keepScreenOn, letScreenSleep } from '@textile/react-native-screen-control'
 ```
   
+## Run Example
+
+```javascript
+cd example/
+yarn
+react-native start
+react-native run-ios
+```
