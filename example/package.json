@@ -1,0 +1,25 @@
+{
+  "name": "ScreenControlExample",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "sync": "yarn upgrade @textile/react-native-screen-control",
+    "test": "jest",
+    "postinstall": "rm -rf node_modules/@textile/react-native-screen-control/example"
+  },
+  "dependencies": {
+    "react": "16.5.0",
+    "react-native": "0.57.2",
+    "@textile/react-native-screen-control": "../"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

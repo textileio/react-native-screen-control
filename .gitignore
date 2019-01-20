@@ -1,3 +1,5 @@
+third-party/
+
 # Android
 
 *.keystore
@@ -5,6 +7,9 @@
 android/**/*.settings
 android/**/*.project
 android/**/*.classpath
+example/android/**/*.settings
+example/android/**/*.project
+example/android/**/*.classpath
 
 # OSX
 #
@@ -15,6 +20,7 @@ android/**/*.classpath
 # Xcode
 #
 build/
+example/build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -43,9 +49,10 @@ local.properties
 # Visual Studio Code
 #
 .vscode/
-
+example/.vscode/
 # node.js
 #
+example/node_modules/
 node_modules/
 npm-debug.log
 yarn-error.log

@@ -16,6 +16,7 @@
     "./lib/**/*"
   ],
   "exclude": [
+    "example",
     "node_modules",
     "coverage"
   ],

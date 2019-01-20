@@ -21,7 +21,7 @@
   "author": "textile.io",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.41.2"
+    "react-native": "*"
   },
   "devDependencies": {
     "@types/react-native": "^0.57.2",
