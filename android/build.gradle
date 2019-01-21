@@ -20,7 +20,8 @@ buildscript {
 
 apply plugin: 'com.android.library'
 
-def DEFAULT_COMPILE_SDK_VERSION = 26
+def DEFAULT_COMPILE_SDK_VERSION = 27
+def DEFAULT_BUILD_TOOLS_VERSION = "27.0.3"
 def DEFAULT_TARGET_SDK_VERSION = 26
 
 android {
@@ -38,22 +39,20 @@ android {
 }
 
 repositories {
+    mavenCentral()
     google()
-    mavenLocal()
     jcenter()
     maven {
-        url "$projectDir/../../react-native/android"
+        url "$rootDir/../../react-native/android"
     }
-    maven {
-        url "$rootDir/../node_modules/react-native/android"
-    }
+}
+
+dependencies {
+    implementation "com.facebook.react:react-native:+"  // From node_modules
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.4'
     distributionUrl = distributionUrl.replace("bin", "all")
 }
-
-dependencies {
-    implementation 'com.facebook.react:react-native:+'
-}
+  
