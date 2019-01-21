@@ -7,8 +7,8 @@
   "linterOptions": {
   "exclude": [
       "**/*.json",
-      "App/NativeModules/Textile/pb/**/*",
-      "coverage/**/*"
+      "coverage/**/*",
+      "dist/**/*"
     ]
   },
   "jsRules": {
